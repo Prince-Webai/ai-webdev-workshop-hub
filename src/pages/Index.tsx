@@ -1,24 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, Clock, Award, Rocket, Brain, Code, Users, ChevronRight, Gift } from "lucide-react";
+import { Avatar } from "@/components/ui/avatar";
+import { CalendarDays, Clock, Award, Rocket, Brain, Code, Users, ChevronRight, Gift, Mail, Phone } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header Section */}
-      <header className="py-6 px-6 bg-gradient-to-r from-workshop-purple/20 to-black/20">
-        <div className="container mx-auto flex justify-center items-center">
-          <img 
-            src="/lovable-uploads/d7301b83-f046-475a-915d-1e6dfecd7210.png" 
-            alt="Anishk Foundation Logo" 
-            className="h-16 md:h-20 object-contain filter drop-shadow-lg hover:scale-105 transition-transform duration-300"
-          />
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-workshop-purple to-black/90 backdrop-blur-sm">
+        <div className="container mx-auto px-6 py-3">
+          <div className="flex items-center justify-between">
+            <img 
+              src="/lovable-uploads/d7301b83-f046-475a-915d-1e6dfecd7210.png" 
+              alt="Anishk Foundation Logo" 
+              className="h-12 object-contain"
+            />
+            <div className="flex gap-6 text-workshop-cyan">
+              <a href="#contact" className="hover:text-workshop-neonPurple transition-colors">Contact</a>
+            </div>
+          </div>
         </div>
-      </header>
+      </nav>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center p-6">
+      {/* Main Content with top padding for fixed nav */}
+      <div className="pt-20">
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center justify-center p-6">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(45,27,105,0.5)_0%,rgba(0,0,0,0.8)_100%)]" />
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div className="text-left space-y-6">
@@ -58,10 +66,10 @@ const Index = () => {
             />
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Certificate Section */}
-      <section className="py-20 bg-workshop-purple/20">
+        {/* Certificate Section */}
+        <section className="py-20 bg-workshop-purple/20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
@@ -96,11 +104,10 @@ const Index = () => {
               </div>
             </div>
           </Card>
-        </div>
-      </section>
+        </section>
 
-      {/* Career Opportunities Section */}
-      <section className="py-20">
+        {/* Career Opportunities Section */}
+        <section className="py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">
             Career Opportunities with AI
@@ -131,10 +138,10 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* AI Impact Section */}
-      <section className="py-20 bg-workshop-purple/20">
+        {/* AI Impact Section */}
+        <section className="py-20 bg-workshop-purple/20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">
             How AI is Changing the World
@@ -172,7 +179,51 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+
+        {/* Speaker & Contact Section */}
+        <section className="py-20" id="contact">
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Speaker Info */}
+              <Card className="p-6 bg-black/50 border border-workshop-cyan">
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <Avatar className="w-32 h-32 border-4 border-workshop-cyan">
+                    <img 
+                      src="/lovable-uploads/d7301b83-f046-475a-915d-1e6dfecd7210.png" 
+                      alt="Speaker" 
+                      className="object-cover"
+                    />
+                  </Avatar>
+                  <div>
+                    <h3 className="text-2xl font-bold text-workshop-cyan mb-2">Anishk Goel</h3>
+                    <p className="text-gray-300">AI & Web Development Expert</p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Contact Info */}
+              <Card className="p-6 bg-black/50 border border-workshop-cyan">
+                <h3 className="text-2xl font-bold gradient-text mb-6">Contact Information</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Mail className="h-5 w-5 text-workshop-cyan" />
+                    <a href="mailto:contact@anishkfoundation.org" className="text-gray-300 hover:text-workshop-cyan transition-colors">
+                      contact@anishkfoundation.org
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Phone className="h-5 w-5 text-workshop-cyan" />
+                    <a href="tel:+1234567890" className="text-gray-300 hover:text-workshop-cyan transition-colors">
+                      +1 (234) 567-890
+                    </a>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

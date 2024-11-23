@@ -201,8 +201,8 @@ const Index = () => {
                     />
                   </Avatar>
                   <div>
-                    <h3 className="text-2xl font-bold text-workshop-cyan mb-2">Anishk Goel</h3>
-                    <p className="text-gray-300">AI & Web Development Expert</p>
+                    <h3 className="text-2xl font-bold text-workshop-cyan mb-2">Prince Gaur</h3>
+                    <p className="text-gray-300">Cloud Engineer, AI & Web Developer</p>
                   </div>
                 </div>
               </Card>

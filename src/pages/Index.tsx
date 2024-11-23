@@ -6,6 +6,17 @@ import { CalendarDays, Clock, Award, Rocket, Brain, Code, Users, ChevronRight, G
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* Header Section */}
+      <header className="py-4 px-6">
+        <div className="container mx-auto flex justify-center">
+          <img 
+            src="/lovable-uploads/d7301b83-f046-475a-915d-1e6dfecd7210.png" 
+            alt="Anishk Foundation Logo" 
+            className="h-24 md:h-32"
+          />
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center p-6">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(45,27,105,0.5)_0%,rgba(0,0,0,0.8)_100%)]" />

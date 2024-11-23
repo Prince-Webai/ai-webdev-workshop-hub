@@ -8,7 +8,6 @@ import FloatingPhoto from "@/components/FloatingPhoto";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <FloatingPhoto />
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-workshop-purple to-black/90 backdrop-blur-sm">
         <div className="container mx-auto px-6 py-3">
@@ -32,9 +31,12 @@ const Index = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(45,27,105,0.5)_0%,rgba(0,0,0,0.8)_100%)]" />
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div className="text-left space-y-6">
-              <Badge className="bg-workshop-purple text-workshop-cyan border-workshop-cyan animate-pulse">
-                Live Workshop
-              </Badge>
+              <div className="flex items-start justify-between">
+                <Badge className="bg-workshop-purple text-workshop-cyan border-workshop-cyan animate-pulse">
+                  Live Workshop
+                </Badge>
+                <FloatingPhoto />
+              </div>
               <h1 className="text-4xl md:text-6xl font-bold gradient-text">
                 Master Class on Web Dev Using AI!
               </h1>

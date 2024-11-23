@@ -2,7 +2,7 @@ import React from 'react';
 
 const FloatingPhoto = () => {
   return (
-    <div className="fixed top-24 right-6 z-50 animate-float">
+    <div className="animate-float">
       <img
         src="/placeholder.svg"
         alt="Floating Profile"

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, Clock, Award, Rocket, Brain, Code, Users, ChevronRight } from "lucide-react";
+import { CalendarDays, Clock, Award, Rocket, Brain, Code, Users, ChevronRight, Gift } from "lucide-react";
 
 const Index = () => {
   return (
@@ -20,16 +20,22 @@ const Index = () => {
             <p className="text-lg text-gray-300">
               Join us for an intensive 3-hour session to maximize your web development skills with AI-powered tools.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-workshop-cyan hover:bg-workshop-purple text-black hover:text-white transition-all neon-border">
-                Register Now
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-              <div className="flex items-center gap-4 text-gray-300">
-                <CalendarDays className="h-5 w-5 text-workshop-cyan" />
-                <span>27 November 2024</span>
-                <Clock className="h-5 w-5 text-workshop-cyan" />
-                <span>4:00 PM - 7:00 PM</span>
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button className="bg-workshop-cyan hover:bg-workshop-purple text-black hover:text-white transition-all neon-border">
+                  Register Now
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+                <div className="flex items-center gap-4 text-gray-300">
+                  <CalendarDays className="h-5 w-5 text-workshop-cyan" />
+                  <span>27 November 2024</span>
+                  <Clock className="h-5 w-5 text-workshop-cyan" />
+                  <span>4:00 PM - 7:00 PM</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 text-gray-300">
+                <Gift className="h-5 w-5 text-workshop-cyan" />
+                <span>Donation: Rs. 21 - Considered for noble causes</span>
               </div>
             </div>
           </div>

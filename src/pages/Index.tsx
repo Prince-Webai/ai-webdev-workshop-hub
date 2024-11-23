@@ -3,10 +3,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar } from "@/components/ui/avatar";
 import { CalendarDays, Clock, Award, Rocket, Brain, Code, Users, ChevronRight, Gift, Mail, Phone } from "lucide-react";
+import FloatingPhoto from "@/components/FloatingPhoto";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <FloatingPhoto />
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-workshop-purple to-black/90 backdrop-blur-sm">
         <div className="container mx-auto px-6 py-3">

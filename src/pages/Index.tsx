@@ -7,12 +7,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header Section */}
-      <header className="py-4 px-6">
-        <div className="container mx-auto flex justify-center">
+      <header className="py-6 px-6 bg-gradient-to-r from-workshop-purple/20 to-black/20">
+        <div className="container mx-auto flex justify-center items-center">
           <img 
             src="/lovable-uploads/d7301b83-f046-475a-915d-1e6dfecd7210.png" 
             alt="Anishk Foundation Logo" 
-            className="h-24 md:h-32"
+            className="h-16 md:h-20 object-contain filter drop-shadow-lg hover:scale-105 transition-transform duration-300"
           />
         </div>
       </header>

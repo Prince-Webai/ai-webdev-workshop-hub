@@ -28,11 +28,11 @@ export const Contact = () => {
           </h2>
           <Card className="p-8 bg-black/50 border border-workshop-cyan hover:neon-border transition-all">
             <div className="flex justify-center items-center gap-6">
-              <SocialLink icon={Phone} href="tel:+1234567890" />
+              <SocialLink icon={Phone} href="tel:+919424131387" />
               {socials.map((social, index) => (
                 <SocialLink key={index} {...social} />
               ))}
-              <SocialLink icon={Mail} href="mailto:contact@anishkfoundation.org" />
+              <SocialLink icon={Mail} href="https://www.anishkfoundation.org" />
             </div>
           </Card>
         </div>

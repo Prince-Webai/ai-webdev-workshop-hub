@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, Phone, Mail } from "lucide-react";
 
 const SocialLink = ({ icon: Icon, href }: { icon: any, href: string }) => (
   <a 
@@ -27,10 +27,12 @@ export const Contact = () => {
             Connect With Us
           </h2>
           <Card className="p-8 bg-black/50 border border-workshop-cyan hover:neon-border transition-all">
-            <div className="flex justify-center gap-6">
+            <div className="flex justify-center items-center gap-6">
+              <SocialLink icon={Phone} href="tel:+1234567890" />
               {socials.map((social, index) => (
                 <SocialLink key={index} {...social} />
               ))}
+              <SocialLink icon={Mail} href="mailto:contact@anishkfoundation.org" />
             </div>
           </Card>
         </div>

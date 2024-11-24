@@ -1,22 +1,22 @@
 import { Card } from "@/components/ui/card";
-import { Github, Linkedin, Twitter, Phone, Mail } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 
-const SocialLink = ({ icon: Icon, href }: { icon: any, href: string }) => (
+const ContactLink = ({ icon: Icon, href, text }: { icon: any; href: string; text: string }) => (
   <a 
     href={href} 
-    className="p-4 hover:bg-workshop-purple/20 rounded-full transition-all"
+    className="p-4 hover:bg-workshop-purple/20 rounded-full transition-all flex items-center gap-3"
     target="_blank"
     rel="noopener noreferrer"
   >
     <Icon className="h-6 w-6 text-workshop-cyan hover:text-workshop-neonPurple" />
+    <span className="text-workshop-cyan hover:text-workshop-neonPurple">{text}</span>
   </a>
 );
 
 export const Contact = () => {
-  const socials = [
-    { icon: Github, href: "https://github.com/yourusername" },
-    { icon: Linkedin, href: "https://linkedin.com/in/yourusername" },
-    { icon: Twitter, href: "https://twitter.com/yourusername" }
+  const contacts = [
+    { icon: Phone, href: "tel:+919424131387", text: "+91 9424131387" },
+    { icon: Mail, href: "https://www.anishkfoundation.org", text: "www.anishkfoundation.org" }
   ];
 
   return (
@@ -27,12 +27,10 @@ export const Contact = () => {
             Connect With Us
           </h2>
           <Card className="p-8 bg-black/50 border border-workshop-cyan hover:neon-border transition-all">
-            <div className="flex justify-center items-center gap-6">
-              <SocialLink icon={Phone} href="tel:+919424131387" />
-              {socials.map((social, index) => (
-                <SocialLink key={index} {...social} />
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+              {contacts.map((contact, index) => (
+                <ContactLink key={index} {...contact} />
               ))}
-              <SocialLink icon={Mail} href="https://www.anishkfoundation.org" />
             </div>
           </Card>
         </div>

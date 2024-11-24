@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Globe } from "lucide-react";
 
 const ContactLink = ({ icon: Icon, href, text }: { icon: any; href: string; text: string }) => (
   <a 
@@ -16,7 +16,7 @@ const ContactLink = ({ icon: Icon, href, text }: { icon: any; href: string; text
 export const Contact = () => {
   const contacts = [
     { icon: Phone, href: "tel:+919424131387", text: "+91 9424131387" },
-    { icon: Mail, href: "https://www.anishkfoundation.org", text: "www.anishkfoundation.org" }
+    { icon: Globe, href: "https://www.anishkfoundation.org", text: "www.anishkfoundation.org" }
   ];
 
   return (

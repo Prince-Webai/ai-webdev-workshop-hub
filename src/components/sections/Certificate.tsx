@@ -31,10 +31,15 @@ export const Certificate = () => {
                 ))}
               </ul>
             </div>
+            
             <div className="bg-workshop-purple/30 p-8 rounded-lg border border-workshop-cyan">
-              <div className="aspect-[4/3] bg-gradient-to-r from-workshop-purple to-workshop-neonPurple rounded-lg flex items-center justify-center">
-                <span className="text-xl font-bold text-white">Sample Certificate</span>
-              </div>
+            <div className="animate-float">
+          <img 
+            src="public/lovable-uploads/Sample Certificate.png" 
+            alt="Workshop Banner" 
+            className="rounded-lg shadow-2xl"
+          />
+        </div>
             </div>
           </div>
         </Card>
